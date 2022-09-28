@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <section>
+            <hr>
+            <form action="guardar.php">
+                <h2>Datos personales</h2>
+                <label for="nombre">Nombres:</label><input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre" /><br/>
+                <label for="Apellidos">Apellidos:</label><input type="text" id="Apellidos" name="Apellidos" value="firulais"/><br/>
+                <label for="telefono">Telefono:</label><input type="tel"><br><label for="Ciudades">Ciudad:</label>
+                <select name="Ciudades">
+                    <option value="NA">Seleccione ciudad</option>
+                    <option value="Medellin">Medellin</option>
+                    <option value="Envigado">Envigado</option>
+                    <option value="Bogota">Bogota</option>
+                    <option value="Bello">Bello</option>
+                </select>
+                <h2>Sexo</h2>
+                <label for="sexo">Masculino</label>
+                <input type="radio" id="sexo" name="sexo">
+                <label for="sexo">Femenino</label><input type="radio" id="sexo" name="sexo">
+                <h2>Deportes</h2>
+                <input type="checkbox" name="natacion" id="natacion"><label for="">Natacion</label><br/>
+                <input type="checkbox" name="futbol" id="futbol"><label for="futbol">Futbol</label><br/>
+                <input type="checkbox" name="atletismo" id="atletismo"><label for="atletismo">Atletismo</label><br/>
+                <input type="checkbox" name="tenis" id="tenis"><label for="tenis">Tenis</label><br/>
+                <label for="fecha">Fecha</label><input type="date" name="fecha" id="fecha">
+                <hr>
+                <label for="archivo">Archivo:</label><input type="file"><br>
+                <input type="file"><br><label for="foto">Clave usuario:</label>
+                <input type="password" name="clave" id="clave">
+                <input type="month">
+                <hr>
+                <label for="color">Color</label><input type="color"><br>
+                <label for="correo">Correo</label><input type="email" name="correo" id="correo"><br>
+                <label for="volumen">Volumen</label><input type="range" name="volumen" id="volumen" max="100" value="25"><br>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Realice su descripción"></textarea>
+                <hr>
+                <input type="submit">
+                <input type="reset">
+            </form>
+
+
+
+            
+        </section>
+    </table>
+</body>
+</html>
