@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="" />
+    <link rel="apple-touch-icon" href="logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>Administración de citas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="/trabajoUniversidad/style8.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>
+    <script src="/trabajoUniversidad/final.js"></script>
+</head>
+
+<body >
+    <h1>Citas Medicas</h1>
+    <div class="container">
+        <div class="row">
+          <div class="slider">
+              <ul>
+                  <li><img src="/trabajoUniversidad/hospitalSanRafael.jpg" alt=""></li>
+                  <li><img src="/trabajoUniversidad/HospitalSanRafael2.jpg" alt=""></li>
+                  <li><img src="/trabajoUniversidad/hospitalSanRafael3.jpg" alt=""></li>
+                  <li><img src="/trabajoUniversidad/hospitalSanRafael4.jpg" alt=""></li>
+              </ul>
+          </div> 
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="one-half column">
+                <h2>crear cita</h2>
+                <div id="msj-error" ></div>
+           
+        
+        <form  id="form" name="form" >
+            <label id="name-label" for="paciente">Nombre del paciente</label>
+            <input type="text" name="paciente" id="paciente" class="u-full-width" placeholder="Ingrese el nombre"
+                required/>
+
+            <label id="Apellido-label" for="acompanante">Nombre del acompañante</label>
+            <input type="text" name="acompanante" id="acompanante" class="u-full-width"
+                placeholder="Ingrese el nombre" required />
+
+            <label id="email-label" for="fecha">Fecha de la cita</label>
+            <input type="date" name="fecha" id="fecha" class="u-full-width" placeholder="Ingrese la fecha" required />
+
+            <label for="hora">Hora de la cita</label>
+            <input type="time" name="hora" id="hora" class="u-full-width" placeholder="Ingrese la hora" required/>
+
+            <label>Síntomas</label>
+            <textarea class="u-full-width" name="sintomas" id="sintomas" placeholder="sintomas del paciente" ></textarea><br>
+            
+            <button type="button"  onclick="validar(),agregarcita()" class="u-full-width button-primary">Agregar Cita</button>
+            <button type="button" onclick="visualizarCitas()" class="u-full-width button-primary">Mostrar Citas</button>
+        </form>
+    </div>
+      <div class="one-half column">
+            <h2>Citas asignadas</h2>
+            <img src="/trabajoUniversidad/paciente.jpg" width="300" alt="">
+        
+            <div id="listadocitas"></div>  
+</div> 
+       
+       
+       
+    </div>
+  
+</body>
+
+</html>
