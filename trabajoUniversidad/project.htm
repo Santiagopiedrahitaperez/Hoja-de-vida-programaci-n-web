@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="" />
-    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="apple-touch-icon" href="/trabajoUniversidad/descarga.jpg" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <title>Administración de pacientes</title>
+    <title>Administración de cita veterinaria</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
@@ -25,10 +26,10 @@
         <div class="row">
           <div class="slider">
               <ul>
-                  <li><img src="/trabajoUniversidad/hospitalSanRafael.jpg" alt=""></li>
-                  <li><img src="/trabajoUniversidad/HospitalSanRafael2.jpg" alt=""></li>
-                  <li><img src="/trabajoUniversidad/hospitalSanRafael3.jpg" alt=""></li>
-                  <li><img src="/trabajoUniversidad/hospitalSanRafael4.jpg" alt=""></li>
+                  <li><img src="/trabajoUniversidad/veterinaria.jpg" alt=""></li>
+                  <li><img src="/trabajoUniversidad/veterinaria1.jpg" alt=""></li>
+                  <li><img src="/trabajoUniversidad/veterinaria2.jpg" alt=""></li>
+                  <li><img src="/trabajoUniversidad/veterinaria3.jpg" alt=""></li>
               </ul>
           </div> 
         </div>
@@ -45,7 +46,7 @@
             <input type="text" name="mascota" id="mascota" class="u-full-width" placeholder="Ingrese el nombre"
                 required />
 
-            <label id="Apellido-label" for="propietario">Nombre del propietario</label>
+            <label id="Apellido-label" for="propietario">Nombre del dueño</label>
             <input type="text" name="propietario" id="propietario" class="u-full-width"
                 placeholder="Ingrese el nombre" required />
 
@@ -56,7 +57,7 @@
             <input type="time" name="hora" id="hora" class="u-full-width" placeholder="Ingrese la hora" required/>
 
             <label>Síntomas</label>
-            <textarea class="u-full-width" name="sintomas" id="sintomas" placeholder="sintomas del paciente" ></textarea><br>
+            <textarea class="u-full-width" name="sintomas" id="sintomas" placeholder="sintomas de la mascota" ></textarea><br>
             
             <button type="button"  onclick=" validar(),agregarcita()" class="u-full-width button-primary">Agregar Cita</button>
             <button type="button" onclick="visualizarCitas()" class="u-full-width button-primary">Mostrar Citas</button>

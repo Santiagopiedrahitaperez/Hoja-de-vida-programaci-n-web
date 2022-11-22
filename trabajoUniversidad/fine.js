@@ -4,19 +4,19 @@ if(citas){
 }else{
     localStorage.setItem("citas",JSON.stringify([]));
 }
-function validarinformacion(){
+function validar(){
     var form = document.form;
-    if(form.paciente.value==0){
-      alert("EL CAMPO NOMBRE DEL PACIENTE ESTA VACIO ");
-      form.paciente.value="";
-      form.paciente.focus();
+    if(form.mascota.value==0){
+      alert("EL CAMPO NOMBRE PACIENTE ESTA VACIO ");
+      form.mascota.value="";
+      form.mascota.focus();
       return false; 
     }
    
-    if(form.acompanante.value==0){
+    if(form.propietario.value==0){
       alert("EL CAMPO  NOMBRE ACOMPAÑANTE ESTA VACIO ");
-      form.acompanante.value="";
-      form.acompanante.focus();
+      form.propietario.value="";
+      form.propietario.focus();
       return false; 
     }
     if(form.fecha.value==0){
@@ -40,23 +40,22 @@ function validarinformacion(){
       }
     alert("Datos enviados con exito ");
     
-}
+  }
 const visualizarCitas=()=>{
-    let citasHTML='';
+    let citasHTML=``;
     let citas=JSON.parse(localStorage.getItem("citas"));
     citas.map(cita=>{
-        citasHTML+=<div class="cita">
-        <p>Paciente: <span>${cita.paciente}</span></p>
-        <p>Acompanante: <span>${cita.acompanante}</span></p>
+        citasHTML+=`<div class="cita">
+        <p>Mascota: <span>${cita.mascota}</span></p>
+        <p>Propietario: <span>${cita.propietario}</span></p>
         <p>Fecha: <span>${cita.fecha}</span></p>
         <p>Hora: <span>${cita.hora}</span></p>
         <p>Sintomas: <span>${cita.sintomas}</span></p>
         
-        <button type="button" onclick="eiminarCita('$cita.id')" class="u-full-width button-eliminar">Eliminar cita</button>
-       
-        
-        
-        </div>
+        <button
+        class="button eliminar u-full-width"
+        onclick="eliminarCita('${cita.id}')">Eliminar cita</button>
+        </div>`
     });
     document.querySelector("#listadocitas").innerHTML=citasHTML;
 }
@@ -70,35 +69,37 @@ const eliminarCita=(idCita)=>{
 }
 
 const agregarcita=()=>{
-  let id=uuid.v1();
-  //     console.log(id);
+    let id=uuid.v1();
 
-  let paciente=document.querySelector("#paciente").value;
-  let acompanante=document.querySelector("#acompanante").value;
-  let fecha=document.querySelector("#fecha").value;
-  let hora=document.querySelector("#hora").value;
-  let sintomas=document.querySelector("#sintomas").value;
 
-  //   console.log(`Nombre paciente: ${paciente}`);
+let mascota=document.querySelector("#mascota").value;
+let propietario=document.querySelector("#propietario").value;
+let fecha=document.querySelector("#fecha").value;
+let hora=document.querySelector("#hora").value;
+let sintomas=document.querySelector("#sintomas").value;
 
-  if(paciente.trim()===''||
-  acompanante.trim()===''||
-  fecha.trim()===''||
-  hora.trim()===''||
-  sintomas.trim()===''){
-  mostrarError("#msj-error","Falta llenar campos");
-  return;}
- 
 
-  let nuevasCitas={id,paciente,acompanante,fecha,hora,sintomas}
-  citas.push(nuevasCitas);
-  localStorage.setItem("citas",JSON.stringify(citas));
-  document.querySelector("#form").reset();
-  // visualizarCitas();
+if(mascota.trim()===''||
+propietario.trim()===''||
+fecha.trim()===''||
+hora.trim()===''||
+sintomas.trim()===''){
+mostrarError("#msj-error","Falta llenar campos");
+return;
 }
+
+let nuevaCita={id,mascota,propietario,fecha,hora,sintomas}
+citas.push(nuevaCita);
+localStorage.setItem("citas",JSON.stringify(citas));
+document.querySelector("#form").reset();
+// visualizarCitas();
+
+
+
+ }
 
 const mostrarError=(elemento,mensaje)=>{
     divError=document.querySelector(elemento);
-    divError.innerHTML=<p class="alerta-error">${mensaje}</p>;
-   setTimeout(()=>{divError.innerHTML='';},2000);
+    divError.innerHTML=`<p class="alerta-error>${mensaje}</p>`;
+   setTimeout(()=>{divError.innerHTML=``;},2000);
 }

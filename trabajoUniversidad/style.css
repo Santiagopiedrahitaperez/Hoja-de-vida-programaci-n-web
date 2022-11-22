@@ -24,40 +24,142 @@ flex-direction: column;
 }
 
 .mydiv{
-    position: absolute;
-    width:100vw;
-    height: 150vh;
+    position: relative;
+    width:auto;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     font-size: 14px;
     font-weight: bold;
-    background: linear-gradient(150deg, #3794c0,#4ddb40,#c1f338);
+    background: linear-gradient(150deg, #f1f504,#0b9add,#18fa03);
     background-size: 200% 200%;
     animation: BgGradient 3s ease infinite;
+    font-family:  Helvetica;
 }
 @keyframes BgGradient{
     0%{background-position: 0%,50%;}
     50%{background-position: 100%,50%;}
     100%{background-position: 0%,50%;}
 }
+.fondoanimado{
+  position: initial;
+  width:104%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(150deg,  #18fa03,#f1f504, #0b9add);
+  background-size: 200% 200%;
+  animation: BgGradient2 3s ease infinite;
+  font-family:  Helvetica;
+}
+@keyframes BgGradient2{
+  0%{background-position: 0%,50%;}
+  50%{background-position: 50%,100%;}
+  100%{background-position: 100%,150%;}
+}
+.fondoanimado2{
+  position: relative;
+  width:auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(150deg,#f1f504,#0b9add,#18fa03);
+  background-size: 200% 200%;
+  animation: BgGradient3 3s ease infinite;
+  font-family:  Helvetica;
+}
+@keyframes BgGradient3{
+  0%{background-position: 0%,50%;}
+  50%{background-position: 50%,100%;}
+  100%{background-position: 100%,150%;}
+}
+.fondoanimado3{
+  position: initial;
+  width:auto;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(150deg, #18fa03,#f1f504, #0b9add);
+  background-size: 200% 200%;
+  animation: BgGradient4 3s ease infinite;
+  font-family:  Helvetica;
+}
+@keyframes BgGradient4{
+  0%{background-position: 0%,50%;}
+  50%{background-position: 50%,100%;}
+  100%{background-position: 100%,150%;}
+}
+.fondoanimado4{
+  position: relative;
+  width:auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(150deg,#f1f504,#0b9add,#18fa03);
+  background-size: 200% 200%;
+  animation: BgGradient5 3s ease infinite;
+  font-family:  Helvetica;
+}
+@keyframes BgGradient5{
+  0%{background-position: 0%,50%;}
+  50%{background-position: 50%,100%;}
+  100%{background-position: 100%,150%;}
+}
+.fondoanimado5{
+  position: relative;
+  width:auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(150deg,#18fa03,#f1f504, #0b9add);
+  background-size: 200% 200%;
+  animation: BgGradient6 3s ease infinite;
+  font-family:  Helvetica;
+}
+@keyframes BgGradient6{
+  0%{background-position: 0%,50%;}
+  50%{background-position: 50%,100%;}
+  100%{background-position: 100%,150%;}
+}
   /* Navbar container */
   .navbar {
     width: 100%;
-    padding-left:  100px;
+    padding-left:  100%;
     overflow: hidden;
-    background-color: #a3aae4;
     font-family: Arial;
+    padding:0;
+    margin: 0;
   }
 /* Links inside the navbar */
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: rgb(8, 8, 8);
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: none; 
 }
  /* The dropdown container */
  .dropdown {
@@ -70,16 +172,16 @@ flex-direction: column;
   font-size: 16px; 
   border: none;
   outline: none;
-  color: white;
+  color: rgb(7, 7, 7);
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
+  font-family:  Helvetica; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #80cbf7;
+  background-color: #76ecec;
 }
 
 /* Dropdown content (hidden by default) */
@@ -95,7 +197,7 @@ flex-direction: column;
 /* Links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: #a3aae4;
+  color: #111111;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
